@@ -15,6 +15,6 @@ jobs:
       - name: build docker
         run: |
           docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
-          docker build -t asajjad2/python-auth-app
+          docker build -t asajjad2/python-auth-app .
       - name: push docker image
         run: docker push asajjad2/python-auth-app
